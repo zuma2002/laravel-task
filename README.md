@@ -3,24 +3,24 @@
 This repository contains a high-performance Laravel application developed as a technical assessment. The project demonstrates the efficient management, seeding, and display of a dataset containing **100,000 records**, ensuring a smooth user experience and fast server response times.
 
 ## 🚀 Key Features
-*   **High-Volume Data Seeding**: Custom seeders optimized for bulk insertion of 100,000 records using database transactions.
-*   **Optimized Search**: Fast server-side filtering and querying designed to handle large datasets without lag.
-*   **Modern UI**: A clean, responsive interface built with Tailwind CSS.
-*   **Cloud-Optimized Build**: Configured to handle restricted-memory environments (e.g., Railway/PaaS) by utilizing pre-compiled assets.
+*   **High-Volume Data Seeding**: Custom seeders optimized for bulk insertion of 100,000 records using database transactions[cite: 1].
+*   **Optimized Search**: Fast server-side filtering and querying designed to handle large datasets without lag[cite: 1].
+*   **Modern UI**: A clean, responsive interface built with Tailwind CSS[cite: 1].
+*   **Performance Focused**: Optimized for low memory consumption even with high record counts[cite: 1].
 
 ## 🛠 Tech Stack
-*   **Framework**: Laravel 11/12
-*   **PHP Version**: 8.4+
-*   **Database**: MySQL
-*   **Frontend**: Tailwind CSS & Vite
-*   **Development Tools**: VS Code, Git, PHPUnit
+*   **Framework**: Laravel 11/12[cite: 1]
+*   **PHP Version**: 8.4+[cite: 1]
+*   **Database**: MySQL (Local)[cite: 1]
+*   **Frontend**: Tailwind CSS & Vite[cite: 1]
+*   **Development Tools**: VS Code, Git, PHPUnit[cite: 1]
 
 ## ⚡ Performance Optimizations
-To meet the requirement of handling 100,000 records efficiently, the following strategies were implemented:
-1.  **Database Indexing**: Critical columns (such as names or emails) are indexed to maintain search speeds under 200ms.
-2.  **Batch Processing**: The database seeder uses batch inserts rather than individual row creation, drastically reducing the initial setup time.
-3.  **Memory Management**: Implemented `LazyCollection` and Eloquent chunking for data processing to keep the server's RAM footprint minimal.
-4.  **Server-Side Pagination**: Ensures the frontend remains fast by only loading a small subset of records at any given time.
+To meet the requirement of handling 100,000 records efficiently, the following strategies were implemented[cite: 1]:
+1.  **Database Indexing**: Critical columns (such as names or emails) are indexed to maintain search speeds under 200ms[cite: 1].
+2.  **Batch Processing**: The database seeder uses batch inserts rather than individual row creation, drastically reducing the initial setup time[cite: 1].
+3.  **Memory Management**: Implemented `LazyCollection` and Eloquent chunking for data processing to keep the server's RAM footprint minimal[cite: 1].
+4.  **Server-Side Pagination**: Ensures the frontend remains fast by only loading a small subset of records at any given time[cite: 1].
 
 ## 💻 Local Setup
 
@@ -46,9 +46,10 @@ To meet the requirement of handling 100,000 records efficiently, the following s
     cp .env.example .env
     php artisan key:generate
     ```
+    *Note: Update your `.env` file with your local MySQL credentials (DB_DATABASE, DB_USERNAME, DB_PASSWORD).*
 
 5.  **Database Migration & Seeding**
-    *Ensure your database credentials are set in the .env file.*
+    Run the following command to create the tables and generate the 100,000 records locally[cite: 1]:
     ```bash
     php artisan migrate --seed
     ```
@@ -58,9 +59,6 @@ To meet the requirement of handling 100,000 records efficiently, the following s
     php artisan serve
     ```
 
-## 🌐 Deployment Note
-For deployment on platforms with strict memory limits (like Railway), this project is configured to bypass heavy `npm install` processes during the build phase by including pre-compiled assets in the repository. Ensure `SKIP_INSTALL_DEPS=true` is set in your environment variables.
-
 ---
 **Developed by:** Muhammad Naqiuddin bin Azamlee  
-**Role:** IT Student at Universiti Kebangsaan Malaysia (UKM)
+**Role:** IT Student at Universiti Kebangsaan Malaysia (UKM)[cite: 1]"""
