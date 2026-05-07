@@ -61,4 +61,4 @@ To meet the requirement of handling 100,000 records efficiently, the following s
 
 ---
 **Developed by:** Muhammad Naqiuddin bin Azamlee  
-**Role:** IT Student at Universiti Kebangsaan Malaysia (UKM)[cite: 1]"""
+**Role:** IT Student at Universiti Kebangsaan Malaysia (UKM)
